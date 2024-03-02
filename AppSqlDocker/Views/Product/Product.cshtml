@@ -1,0 +1,29 @@
+﻿@model ProductDto
+<h4>Product</h4>
+<hr />
+<form asp-action="CreateProduct" asp-controller="Product" method="post">
+	<div class="col-md-4">
+		<input type="hidden" asp-for="id" />
+		<div class="form-group">
+			<label asp-for="name">Name</label>
+			<input asp-for="name" class="form-control" />
+			<span asp-validation-for="name" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="quantity">Quantity</label>
+			<input asp-for="quantity" class="form-control" />
+			<span asp-validation-for="quantity" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="price">Price</label>
+			<input asp-for="price" class="form-control" />
+			<span asp-validation-for="price" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="description">Description</label>
+			<input asp-for="description" class="form-control" />
+			<span asp-validation-for="description" class="text-danger"></span>
+		</div><br />
+		<button type="submit" class="btn btn-primary">Kaydet</button>
+	</div>
+</form>

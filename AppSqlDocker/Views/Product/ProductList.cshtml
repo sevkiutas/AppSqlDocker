@@ -1,0 +1,23 @@
+﻿@model List<ProductDto>
+<h5>Product List</h5><hr />
+<table class="table">
+	<thead>
+		<tr>
+			<td>Product Name</td>
+			<td>Price</td>
+			<td>Description</td>
+			<td>#</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.name</td>
+				<td>@item.priceCurrency</td>
+				<td>@item.description</td>
+				<td><a class="btn btn-warning btn-sm" href="/Product/Product/@item.id">edit</a> &nbsp;<a class="btn btn-danger btn-sm" href="/Product/DeleteProduct/@item.id">delete</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
